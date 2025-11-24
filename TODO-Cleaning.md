@@ -83,36 +83,6 @@ Eine einheitliche und konsistente Darstellung, um spätere Gruppierungen und Ana
 
 ---
 
-## 5. Berufserfahrung normalisieren
-
-### Probleme
-- Textbasierte Sonderwerte (z. B. „Less than 1 year“)
-- Teilweise Zahlen als Strings
-- Mischung aus Zahlen, Text und NaN
-
-### Maßnahmen
-- `"Less than 1 year"` → `0`
-- `"More than 50 years"` → `50`
-- Strings in Integer konvertieren
-- NaN-Werte beibehalten
-
-### Betroffene Spalten
-- `YearsCode`
-- `YearsCodePro`
-- `WorkExp`
-
----
-
-## 6. Einkommens- und Kompensationsspalten prüfen
-
-### Maßnahmen
-- Numerischen Typ beibehalten
-- Ausreißer identifizieren (optional)
-- NaN unverändert lassen
-
-### Beispiel
-- `ConvertedCompYearly`
-
 ---
 
 ## 7. Freitextfelder minimal bereinigen
