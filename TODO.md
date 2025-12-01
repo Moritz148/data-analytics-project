@@ -1,4 +1,5 @@
-- Über jede Spalte gehen und entscheiden, ob wir diese behalten wollen oder nicht
-- ConvertedComp Spalte in Datensatz einfügen
-- Mindestanforderungen5_Denny Begründungen mit einfügen
-- Mindestanforderungen6
+- ConvertedComp Spalte in Datensatz einfügen  --> Jonas
+- onehot Encoding von gesamten Datensatz und als neuen Datensatz speichern --> Moritz
+- Bereinigter Datensatz (ohne alles was wir rausgelöscht haben) --> Moritz
+- Mindestanforderungen5_Denny Begründungen mit einfügen --> Denny
+- Mindestanforderungen6 Klassifikation --> Denny anfangen --> muss sich eh jeder dann damit beschäftigen
