@@ -1,0 +1,4 @@
+- Über jede Spalte gehen und entscheiden, ob wir diese behalten wollen oder nicht
+- ConvertedComp Spalte in Datensatz einfügen
+- Mindestanforderungen5_Denny Begründungen mit einfügen
+- Mindestanforderungen6
