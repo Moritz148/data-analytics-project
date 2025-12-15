@@ -1,17 +1,19 @@
-Manche Spalten auf Skala bringen anstatt One-Hot-Encoden
+Manche Spalten auf Skala bringen anstatt One-Hot-Encoden --> EducationLevel, OrgSize
 
 Top 10 Programmiersprachen + Datenbanken, etc. One-Hot-Encoden
 
 PCA nur auf numerisch numerische Werte durchführen
 
-GridSearch laufen lassen
+GridSearch laufen lassen Jonas
 
 XG-Boost verwendet für Klassifikation
 
 RemoteWork + Age raus aus One-Hot
 
+ConvertedComp Yearly
 
-Top10 jeweils für diese Spalten:
+
+Top10 jeweils für diese Spalten: Jonas
 
 'LanguageHaveWorkedWith':
 JavaScript,20986
