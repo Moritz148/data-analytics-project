@@ -1,6 +1,6 @@
 Manche Spalten auf Skala bringen anstatt One-Hot-Encoden --> EducationLevel, OrgSize
 
-Top 10 Programmiersprachen + Datenbanken, etc. One-Hot-Encoden
+Top 10 Programmiersprachen + Datenbanken, etc. One-Hot-Encoden --> Restliche als Other encoden
 
 PCA nur auf numerisch numerische Werte durchführen
 

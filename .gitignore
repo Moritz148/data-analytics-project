@@ -14,5 +14,6 @@ wheels/
 Moritz
 
 /stack-overflow-developer-survey-2025
-*.csv.DS_Store
+
 .DS_Store
+
