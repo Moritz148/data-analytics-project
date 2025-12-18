@@ -12,3 +12,6 @@ wheels/
 .venv
 
 Moritz
+
+/stack-overflow-developer-survey-2025
+*.csv
