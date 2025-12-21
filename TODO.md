@@ -6,7 +6,7 @@ PCA nur auf numerisch numerische Werte durchführen
 
 GridSearch laufen lassen Jonas
 
-XG-Boost verwendet für Klassifikation
+XG-Boost verwendet für Klassifikation done
 
 RemoteWork + Age raus aus One-Hot
 
