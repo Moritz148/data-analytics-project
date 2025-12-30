@@ -4,7 +4,7 @@ Top 10 Programmiersprachen + Datenbanken, etc. One-Hot-Encoden --> Restliche als
 
 PCA nur auf numerisch numerische Werte durchführen
 
-GridSearch laufen lassen Jonas
+GridSearch laufen lassen (auch für Regression) Jonas
 
 XG-Boost verwendet für Klassifikation done
 
