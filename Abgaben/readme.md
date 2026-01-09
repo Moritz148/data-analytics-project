@@ -41,6 +41,26 @@ Dieses Projekt basiert auf den Daten der Stack Overflow Developer Survey 2025. D
 ### Weitere Clustering-/Klassifikationsnotebooks (auf OHE)
 - Clustering mit dem OHE-Datensatz (`5_Clustering_one-hot-encoded.ipynb`)
 - Klassifikation mit dem OHE-Datensatz (`6_Klassifikation_SVC_employment_OHE.ipynb`)
+- 
+### 7) PCA / Dimensionsreduktion
+- PCA auf rein numerischen Features (Cleanup-Datensatz)
+- Ziel: Dimensionalität reduzieren, dabei möglichst viel Varianz/Information erhalten
+- Pipeline mit Standardisierung + PCA (`n_components=0.9`)
+- Notebook: `7_PCA_DimReduktion.ipynb`
+
+### 8) Lineare Regression — Einkommen vorhersagen (`ConvertedCompTotal`)
+- Regression auf dem **OHE-Datensatz** zur Vorhersage von `ConvertedCompTotal`
+- Inklusive Train/Test-Split, Baselines, Evaluation (RMSE, R², MAE) & Lernkurve
+- Enthält GridSearch
+
+**8a) Naives Baseline-Modell (wenige Features)**
+- Nutzt nur `WorkExp` und `Country_*` (OHE) als sehr einfache Referenz
+- Notebook: `8_LineareRegression_extended_gridsearch_naive.ipynb`
+
+**8b) Erweitertes Regressionsmodell (mehr Features)**
+- Nutzt mehrere numerische Features + Dummies (OHE), inkl. Lernkurve & Koeffizientenanalyse
+- Notebook: `8_LineareRegression_extended_gridsearch.ipynb`
+
 
 ## Abgabe-relevant
 
@@ -48,6 +68,9 @@ Als Abgabe zählen:
 - Notebooks 1–4
 - `5_Clustering_ABGABE.ipynb`
 - `6_Klassifikation_XGBoost_employment_OHE_ABGABE.ipynb`
+- `7_PCA_DimReduktion.ipynb`
+- `8_LineareRegression_extended_gridsearch.ipynb`
+- `8_LineareRegression_extended_gridsearch_naive.ipynb`
 
 Alle übrigen Notebooks sind zusätzliche Lösungsansätze/Experimente.
 
