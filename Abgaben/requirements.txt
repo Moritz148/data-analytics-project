@@ -1,0 +1,21 @@
+# Data / Numerics
+numpy
+pandas
+scipy
+
+# Visualisierung
+matplotlib
+seaborn
+
+# ML / Feature Engineering / Clustering / SVM etc.
+scikit-learn
+
+# Währungsumrechnung (import: from currency_converter import CurrencyConverter)
+currencyconverter
+
+# Für die XGBoost-Notebooks
+xgboost
+
+# Notebook-Umgebung (falls du alles in venv laufen lassen willst)
+jupyter
+ipykernel
