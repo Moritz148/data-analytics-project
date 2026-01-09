@@ -24,11 +24,11 @@ Dieses Projekt basiert auf den Daten der Stack Overflow Developer Survey 2025. D
 - Entfernt/vereinheitlicht problematische Spalten, behandelt Missing Values/Datentypen
 - Erzeugt den **Cleanup-Datensatz** als Basis für kommende Modelle
 
-### Clustering (Cleanup) — Unsupervised Profile / Gruppenbildung
+### 5) Clustering (Cleanup) — Unsupervised Profile / Gruppenbildung
 - Clustering auf dem Cleanup-Datensatz (`5_Clustering_ABGABE.ipynb`)
 - Clusteranzahl über Elbow, Ergebnis: grobe Entwicklerprofile
 
-### Klassifikation (SVC) — Cleanup-Datensatz
+### 6) Klassifikation (SVC) — Cleanup-Datensatz
 - SVC-Klassifikation auf dem Cleanup-Datensatz
 - Zwei Zielvariablen:
   - **Employment** (`6_Klassifikation_SVC_employment.ipynb`)
