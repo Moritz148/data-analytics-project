@@ -7,15 +7,15 @@ scipy
 matplotlib
 seaborn
 
-# ML / Feature Engineering / Clustering / SVM etc.
+# ML
 scikit-learn
 
-# Währungsumrechnung (import: from currency_converter import CurrencyConverter)
+# Währungsumrechnung
 currencyconverter
 
 # Für die XGBoost-Notebooks
 xgboost
 
-# Notebook-Umgebung (falls du alles in venv laufen lassen willst)
-jupyter
+# Notebook-Umgebung
+jupyterlab
 ipykernel

@@ -53,14 +53,13 @@ Dieses Projekt basiert auf den Daten der Stack Overflow Developer Survey 2025. D
 - Inklusive Train/Test-Split, Baselines, Evaluation (RMSE, R², MAE) & Lernkurve
 - Enthält GridSearch
 
-**8a) Naives Baseline-Modell (wenige Features)**
-- Nutzt nur `WorkExp` und `Country_*` (OHE) als sehr einfache Referenz
-- Notebook: `8_LineareRegression_extended_gridsearch_naive.ipynb`
-
-**8b) Erweitertes Regressionsmodell (mehr Features)**
+**8a) Erweitertes Regressionsmodell (mehr Features)**
 - Nutzt mehrere numerische Features + Dummies (OHE), inkl. Lernkurve & Koeffizientenanalyse
 - Notebook: `8_LineareRegression_extended_gridsearch.ipynb`
-
+- 
+**8b) Naives Baseline-Modell (wenige Features)**
+- Nutzt nur `WorkExp` und `Country_*` (OHE) als sehr einfache Referenz
+- Notebook: `8_LineareRegression_extended_gridsearch_naive.ipynb`
 
 ## Abgabe-relevant
 
