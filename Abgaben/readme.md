@@ -14,6 +14,7 @@ Dieses Projekt basiert auf den Daten der Stack Overflow Developer Survey 2025. D
 
 ### 3) Notebook 3 — Vertiefung / weitere Transformationen
 - Feature-Engineering-Schritte
+- Umrechnung des Gehalts auf USD mit dem [CurrencyConverter](https://pypi.org/project/CurrencyConverter/) 
 - Zusätzliche Analysen, Selektion/Filterung relevanter Attribute
 
 ### 4) Notebook 4 — Analyse / Vorbereitung finaler Struktur
