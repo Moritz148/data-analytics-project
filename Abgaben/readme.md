@@ -1,48 +1,74 @@
 # Notebook-Übersicht / Ablauf
 
-Dieses Projekt basiert auf den Daten der Stack Overflow Developer Survey 2025. Die Notebooks bauen schrittweise aufeinander auf: erst Exploration & Vorbereitung, dann Cleanup, danach Clustering/Klassifikation – einmal auf dem Cleanup-Datensatz und später auf dem OHE-Datensatz.
+Dieses Projekt basiert auf den Daten der [Stack Overflow Developer Survey 2025](https://survey.stackoverflow.co/). 
+Die Notebooks sind so konzipiert, dass sie schrittweise aufeinander aufbauen. Die Vorgehensweise gliedert sich in die folgenden Schritte: Exploration und Vorbereitung, Transformation/Feature Engineering, Cleanup/Export sowie Clustering/Klassifikation/Regression.
 
-## Notebooks
-**Falls die Notebooks ausgeführt werden, muss man auf die folgende Reihenfolge achten.**
-### 1) Notebook 1 — Survey Basis / Initial Exploration
-- Lädt den Rohdatensatz (`survey_results_public.csv`)
-- Erster Überblick: relevante Spalten, Missing Values, erste einfache Auswertungen/Plots
+## Daten & Zwischenstände
 
-### 2) Notebook 2 — Erste Anpassungen / Feature-Aufbereitung
+- **Grundlegender Datensatz**
+  - `survey_results_public.csv`
+
+- **Zwischenstände**
+  - `output_woche1.csv`
+  - `output_woche2.csv`
+  - `output_woche4.csv`
+  - `survey_results_cleaned_final.csv`
+  - `One-Hot-Encoded-final.csv`
+
+## Notebooks in ihrere Reihenfolge
+**_Falls die Notebooks ausgeführt werden, muss man auf die folgende Reihenfolge achten._**
+### 1) Notebook 1 — Survey Basis / Initiale Exploration
+- `1_NumPy_Pandas.ipynb`
+- Überblick, erste Analysen, NumPy-Arrays
+- Export: `output_woche1.csv`
+
+### 2) Notebook 2 — Datenexploration
+- `2_Datenexploration.ipynb`
 - Bereinigung erster Felder (z. B. Harmonisierung von Kategorien, Umbenennungen)
 - Ableitung erster Hilfsspalten/Features für spätere Analysen
+- Exploration & Visualisierungen
+- Export: `output_woche2.csv`
 
-### 3) Notebook 3 — Vertiefung / weitere Transformationen
-- Feature-Engineering-Schritte
-- Umrechnung des Gehalts auf USD mit dem [CurrencyConverter](https://pypi.org/project/CurrencyConverter/) 
+### 3) Notebook 3 — Datentransformation
+- `3_Datentransformation.ipynb`
+- Transformationen & Auswertungen 
 - Zusätzliche Analysen, Selektion/Filterung relevanter Attribute
 
-### 4) Notebook 4 — Analyse / Vorbereitung finaler Struktur
-- Letzte Anpassungen auf Basis von Notebook 2 (und ggf. 3)
+### 4) Notebook 4 — Feature Engineering & Time Series
+- `4_Feature Engineering_Time Series.ipynb`
+- Umrechnung des Gehalts auf USD mit dem [CurrencyConverter](https://pypi.org/project/CurrencyConverter/)
 - Ergebnis ist eine konsistente Datenbasis für den nächsten Cleanup-Schritt
+- Export: `output_woche4.csv`
 
 ### Cleanup-Notebook — Finales Cleaning & Export
+- `Cleanup.ipynb`
 - Entfernt/vereinheitlicht problematische Spalten, behandelt Missing Values/Datentypen
-- Erzeugt den **Cleanup-Datensatz** als Basis für kommende Modelle
+- Erzeugt den Cleanup-Datensatz als Basis für kommende Modelle
+- Export: `survey_results_cleaned_final.csv`
 
-### 5) Clustering (Cleanup) — Unsupervised Profile / Gruppenbildung
-- Clustering auf dem Cleanup-Datensatz (`5_Clustering_ABGABE.ipynb`)
-- Clusteranzahl über Elbow, Ergebnis: grobe Entwicklerprofile
+### 5) Clustering (Cleanup)
+- `5_Clustering_ABGABE.ipynb`
+- Numerik + TF-IDF, Elbow-Methode, 2D-Plot via TruncatedSVD
 
-### 6) Klassifikation (SVC) — Cleanup-Datensatz
-- SVC-Klassifikation auf dem Cleanup-Datensatz
-- Zwei Zielvariablen:
-  - **Employment** (`6_Klassifikation_SVC_employment.ipynb`)
-  - **JobSat** (`6_Klassifikation_SVC_JobSat.ipynb`)
-
-### OneHotEncoding-Notebook — OHE-Datensatz erzeugen
+### OneHotEncoding-Notebook — One-Hot-Encodeden Datensatz erzeugen
+- `One-Hot-Encoding_mitSkala.ipynb`
 - One-Hot-Encoding (OHE) geeigneter kategorialer Spalten
-- Export des **OHE-Datensatzes**, der in den weiteren Modellen verwendet wird
+- Export des OHE-Datensatzes, der in den weiteren Modellen verwendet wird
+- Export: `One-Hot-Encoded-final.csv`
 
-### Weitere Clustering-/Klassifikationsnotebooks (auf OHE)
-- Clustering mit dem OHE-Datensatz (`5_Clustering_one-hot-encoded.ipynb`)
-- Klassifikation mit dem OHE-Datensatz (`6_Klassifikation_SVC_employment_OHE.ipynb`)
-- 
+### 5b) Clustering (OHE)
+- `5_Clustering_one-hot-encoded.ipynb`
+- Clustering auf OHE + Numerik
+
+### 6) Klassifikation (SVC / XGBoost)
+- Cleanup:
+  - `6_Klassifikation_SVC_employment.ipynb`
+  - `6_Klassifikation_SVC_JobSat.ipynb`
+  - `6_Klassifikation_XGBoost_JobSat_ABGABE.ipynb`
+- OHE:
+  - `6_Klassifikation_SVC_employment_OHE.ipynb`
+  - `6_Klassifikation_XGBoost_employment_OHE.ipynb`
+
 ### 7) PCA / Dimensionsreduktion
 - PCA auf rein numerischen Features (Cleanup-Datensatz)
 - Ziel: Dimensionalität reduzieren, dabei möglichst viel Varianz/Information erhalten
@@ -64,10 +90,13 @@ Dieses Projekt basiert auf den Daten der Stack Overflow Developer Survey 2025. D
 
 ## Abgabe-relevant
 
-Als Abgabe zählen:
-- Notebooks 1–4
+Hier sind die abgaberelevanten Notebooks aufgelistet::
+- `1_NumPy_Pandas.ipynb`
+- `2_Datenexploration.ipynb`
+- `3_Datentransformation.ipynb`
+- `4_Feature Engineering_Time Series.ipynb`
 - `5_Clustering_ABGABE.ipynb`
-- `6_Klassifikation_XGBoost_employment_OHE_ABGABE.ipynb`
+- `6_Klassifikation_XGBoost_JobSat_ABGABE.ipynb`
 - `7_PCA_DimReduktion.ipynb`
 - `8_LineareRegression_extended_gridsearch.ipynb`
 - `8_LineareRegression_extended_gridsearch_naive.ipynb`
