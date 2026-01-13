@@ -1,21 +1,10 @@
-# Data / Numerics
 numpy
 pandas
 scipy
-
-# Visualisierung
 matplotlib
 seaborn
-
-# ML
 scikit-learn
-
-# Währungsumrechnung
 currencyconverter
-
-# Für die XGBoost-Notebooks
 xgboost
-
-# Notebook-Umgebung
 jupyterlab
 ipykernel
